@@ -1,0 +1,55 @@
+:root {
+  --color-primary: hsl(186, 96%, 57%);
+  --color-background: hsl(212, 45%, 89%);
+  --color-primary-text: hsl(244, 100%, 3%);
+  --color-icon: hsl(0, 0%, 33%);
+  --color-secondary-text: hsl(0, 0%, 33%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+
+.dark-mode {
+  --color-primary: hsl(243, 79%, 53%);
+  --color-background:  hsl(196, 100%, 3%);;
+  --color-primary-text: hsl(244, 100%, 97%);;
+  --color-icon: hsl(243, 28%, 51%);;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* color-scheme: dark light; */
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+h3,
+h4,
+h6 {
+  text-wrap: balance;
+  font-weight: 700;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
