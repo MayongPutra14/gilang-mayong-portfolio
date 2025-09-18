@@ -1,2 +1,6 @@
+/* From Forlder Global */
 @import url('./global/boilerplate.css');
 @import url('./global/fonts.css');
+
+/* From Folder Components */
+@import url('./components/header.css');

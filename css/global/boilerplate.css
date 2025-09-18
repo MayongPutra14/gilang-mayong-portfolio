@@ -4,6 +4,7 @@
   --color-primary-text: hsl(244, 100%, 3%);
   --color-icon: hsl(0, 0%, 33%);
   --color-secondary-text: hsl(0, 0%, 33%);
+  --color-white: #ffffff;
 }
 
 *,
@@ -32,7 +33,12 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: var(--color-background);
   margin: 0;
+}
+
+main {
+  padding-top: 2rem;
 }
 
 h3,
@@ -44,6 +50,7 @@ h6 {
 }
 
 a {
+  display: block;
   text-decoration: none;
 }
 
@@ -52,4 +59,8 @@ svg {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+ul li {
+  list-style-type: none;
 }

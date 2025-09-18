@@ -1,0 +1,140 @@
+header {
+  max-width: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+}
+
+nav {
+  background-color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+}
+
+/* My profile */
+nav .profile-name {
+  width: clamp(11rem, 10rem + 4vw, 22rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* My name */
+h4 {
+  color: var(--color-secondary-text);
+  font-size: var(--h6);
+  font-weight: 700;
+}
+
+.blue {
+  color: var(--color-primary);
+}
+
+/* My image profile */
+nav img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  border: 2px solid var(--color-primary);
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li a {
+  padding: 0rem 1rem;
+}
+
+nav ul li a{
+  display: block;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--color-secondary-text);
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  color: var(--color-primary);
+  transition: all 0.3s ease;
+}
+
+
+/* Styling border */
+.listbar {
+  border: 2px solid transparent;
+  border-radius: 5px;
+  fill: var(--color-primary);
+}
+
+.listbar.actice {
+  border: 2px solid var(--color-primary);
+}
+
+/* Navbar link in mobile */
+@media (max-width: 48rem) {
+  nav ul {
+    background-color: var(--color-white);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 50%;
+    flex-direction: column;
+    padding-top: 5.5rem;
+    border-bottom-left-radius: 20px;
+    transform: translateY(-100%);
+    transition: all .5s ease;
+    opacity: 0;
+    z-index: -1;
+  }
+  nav ul li a{
+    padding: 1rem;
+  }
+
+  nav ul.slide {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+
+/* Navbar in desktop*/
+@media (min-width: 48rem) {
+  .header-wrapper { /*Placeholder, height is fixed, prevent small jerk from navbar transition*/
+    height: 4.375rem ;
+  }
+
+  nav {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-end-end-radius: 20px;
+    border-end-start-radius: 20px;
+    transition: all 0.3s ease;
+  }
+
+  nav .listbar {
+    display: none;
+  }
+
+  nav.scrolled {
+    position: fixed;
+    width: 100%;
+    transform: translateY(-100%);
+    animation: slideDown 1s ease forwards;
+    margin: 0;
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+}

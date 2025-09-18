@@ -24,5 +24,11 @@
 }
 
 :root {
-    
+  /* Font size */
+  --h3: clamp(1rem, 0.216rem + 3.92vw, 3.157rem);
+  --h4: clamp(1rem, 0.502rem + 2.49vw, 2.369rem);
+  --h6: clamp(1rem, 0.879rem + 0.61vw, 1.333rem);
+  --fs-body-text: clamp(0.5rem, 0.318rem + 0.91vw, 1rem);
+
+  /* Spacing */
 }
