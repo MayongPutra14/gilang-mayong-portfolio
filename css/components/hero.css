@@ -1,0 +1,83 @@
+/* This section is connected with decorations.css */
+/* it is used to make decoration position easier to maintain */
+.home {
+  display: relative;
+  overflow: hidden;
+  height: 100vh;
+  /* padding-bottom: 10rem; */
+}
+
+.home .deco-wrapper {
+  pointer-events: none;
+  inset: 0;
+  z-index: 0;
+}
+
+/* End of decorations.css connection */
+
+/* Hero Section */
+/* This is container of column left and column right*/
+.hero-container {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: var(--size-20);
+}
+
+/* Styling  left column in mobile*/
+.profile-left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-20);
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-16);
+}
+
+.profile h6 {
+  font-size: var(--h6);
+  color: var(--color-secondary-text);
+}
+
+.profile h3 {
+  font-size: var(--h3);
+  color: var(--color-primary-text);
+}
+
+.profile h3 span {
+  color: var(--color-primary);
+}
+
+.profile p {
+  font-size: var(--fs-body-text);
+  color: var(--color-secondary-text);
+}
+
+/* Styling right column in mobile */
+.profile-right {
+  position: relative;
+}
+
+.profile-right img {
+  border-radius: 10%;
+  object-fit: cover;
+  border-radius: 30% 70% 55% 45% / 60% 35% 65% 40%;
+}
+
+/* Desktop */
+@media (min-width: 48rem) {
+  .hero-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile-left {
+    max-width: 50%;
+  }
+}

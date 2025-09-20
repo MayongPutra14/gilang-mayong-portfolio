@@ -1,6 +1,9 @@
 /* From Forlder Global */
 @import url('./global/boilerplate.css');
 @import url('./global/fonts.css');
+@import url('./global/decorations.css');
+@import url('./global/buttons.css');
 
 /* From Folder Components */
 @import url('./components/header.css');
+@import url('./components/hero.css');

@@ -15,10 +15,11 @@ nav {
 
 /* My profile */
 nav .profile-name {
-  width: clamp(11rem, 10rem + 4vw, 22rem);
+  width: clamp(12rem, 11rem + 3vw, 22rem);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 
 /* My name */
@@ -62,7 +63,7 @@ nav ul li a:hover {
 }
 
 
-/* Styling border */
+/* Styling border of listbar */
 .listbar {
   border: 2px solid transparent;
   border-radius: 5px;

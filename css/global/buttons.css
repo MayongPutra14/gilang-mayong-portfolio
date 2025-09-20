@@ -1,0 +1,48 @@
+.buttons {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.buttons button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--fs-body-text);
+  padding: clamp(0.1rem, 0.318rem + 0.91vw, 0.6rem)
+    clamp(0.8rem, 0.318rem + 0.91vw, 1rem);
+  white-space: nowrap;
+  width: auto;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.buttons .icn-download {
+  width: var(--fs-body-text);
+  height: var(--fs-body-text);
+  fill: hsl(243, 28%, 51%);
+}
+
+.btn-cta {
+  background-color: var(--color-primary);
+  border: none;
+  color: var(--color-white);
+  font-weight: 700;
+  box-shadow: 0 0 4px var(--color-primary);
+  transition: all .2s ease;
+}
+
+.btn-cta:hover {
+  box-shadow: 0 0 8px var(--color-primary);
+  transform: scale(1.1);
+}
+
+.btn-cv {
+  background-color: transparent;
+  border: 2px solid hsl(243, 28%, 51%);
+  color: hsl(243, 28%, 51%);
+  transition: all .2s ease;
+}
+
+.btn-cv:hover {
+    transform: scale(1.1);
+}

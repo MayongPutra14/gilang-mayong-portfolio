@@ -5,12 +5,28 @@
   --color-icon: hsl(0, 0%, 33%);
   --color-secondary-text: hsl(0, 0%, 33%);
   --color-white: #ffffff;
+
+  /* Size */
+  --size-16: 1rem; /* 16px */
+  --size-20: calc(1rem + 0.25rem); /* 20px */
+  --size-24: 1.5rem; /* 24px */
+  --size-28: calc(1.5rem + 0.25rem); /* 28px */
+  --size-32: 2rem; /* 32px */
+  --size-36: calc(2rem + 0.25rem); /* 36px */
+  --size-40: 2.5rem; /* 40px */
+  --size-44: calc(2.5rem + 0.25rem); /* 44px */
+  --size-48: 3rem; /* 48px */
+  --size-52: calc(3rem + 0.25rem); /* 52px */
+  --size-56: 3.5rem; /* 56px */
+  --size-60: calc(3.5rem + 0.25rem); /* 60px */
+  --size-64: 4rem; /* 64px */
 }
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  /* outline: 2px solid red;  */
 }
 
 * {
@@ -21,9 +37,9 @@
 
 .dark-mode {
   --color-primary: hsl(243, 79%, 53%);
-  --color-background:  hsl(196, 100%, 3%);;
-  --color-primary-text: hsl(244, 100%, 97%);;
-  --color-icon: hsl(243, 28%, 51%);;
+  --color-background: hsl(196, 100%, 3%);
+  --color-primary-text: hsl(244, 100%, 97%);
+  --color-icon: hsl(243, 28%, 51%);
 }
 
 html {
@@ -38,7 +54,12 @@ body {
 }
 
 main {
-  padding-top: 2rem;
+  position: relative;
+  padding-top: 6rem;
+}
+
+section {
+  padding: 0 min(5rem, 3vw);
 }
 
 h3,
@@ -47,6 +68,11 @@ h6 {
   text-wrap: balance;
   font-weight: 700;
   margin: 0;
+}
+
+p {
+  line-height: 1.5;
+  letter-spacing: 0.05rem;
 }
 
 a {
