@@ -23,7 +23,7 @@ nav .profile-name {
 }
 
 /* My name */
-h4 {
+h5 {
   color: var(--color-secondary-text);
   font-size: var(--h6);
   font-weight: 700;
@@ -63,7 +63,7 @@ nav ul li a:hover {
 }
 
 
-/* Styling border of listbar */
+/* Styling border of listbar (hamburger menu) */
 .listbar {
   border: 2px solid transparent;
   border-radius: 5px;
@@ -82,7 +82,7 @@ nav ul li a:hover {
     top: 0;
     right: 0;
     width: 40%;
-    height: 50%;
+    height: 60%;
     flex-direction: column;
     padding-top: 5.5rem;
     border-bottom-left-radius: 20px;

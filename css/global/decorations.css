@@ -9,6 +9,7 @@
   z-index: -1;
 }
 
+/* Hero section decorations */
 /* Decoration of .profile-right */
 .circle-left {
   background-color: var(--color-primary);
@@ -66,7 +67,7 @@
 /* Decorations rectangle, triangle, and circle of profile right */
 .rectangle {
   position: absolute;
-  bottom: 20% ;
+  bottom: 20%;
   width: clamp(5rem, 8vw, 6.25rem);
   height: clamp(5rem, 8vw, 6.25rem);
   border: 4px solid var(--color-decorations);
@@ -82,21 +83,81 @@
 }
 
 .hero-decorations .circle {
-    position: absolute;
-    left: var(--size-64);
-    top: var(--size-48);
-    width: var(--size-64);
-    height: var(--size-64);
-    border-color: var(--color-decorations);
-    background-color: transparent;
-    filter: blur(1px);
+  position: absolute;
+  left: var(--size-64);
+  top: var(--size-48);
+  width: var(--size-64);
+  height: var(--size-64);
+  border-color: var(--color-decorations);
+  background-color: transparent;
+  filter: blur(1px);
 }
 
-
 @media (min-width: 48rem) {
-    .blob {
-    width: 24rem;
-    height: 24rem;
-    animation: morph 12s ease-in-out infinite alternate;
+  .circle-left {
+    width: clamp(14rem, 8.229rem + 22.73vw, 24rem);
+    height: clamp(14rem, 8.229rem + 22.73vw, 24rem);
+    top: -30%;
+    left: -12%;
+    opacity: 0.2;
+  }
+
+  .blob {
+    width: 22rem;
+    height: 22rem;
+    bottom: 0%;
+    right: 14%;
+    animation: morph 25s ease-in-out infinite alternate;
+  }
+}
+
+/* About Me Decorations */
+.about-left svg {
+  position: absolute;
+  top: 0%;
+  left: 5%;
+  width: clamp(4rem, 3.545rem + 7.27vw, 8rem);
+  height: clamp(4rem, 3.545rem + 7.27vw, 8rem);
+}
+
+.circle-lg {
+  position: absolute;
+  top: 0;
+  right: 15%;
+  width: clamp(1rem, 1.545rem + 3.27vw, 4rem);
+  height: clamp(1rem, 1.545rem + 3.27vw, 4rem);
+  opacity: 0.4;
+  border: 4px solid var(--color-primary);
+  background-color: transparent;
+}
+
+.circle-sml {
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  width: clamp(2rem, 1.545rem + 4.27vw, 6rem);
+  height: clamp(2rem, 1.545rem + 4.27vw, 6rem);
+  opacity: 0.8;
+  border: 4px solid var(--color-primary);
+  background-color: transparent;
+  filter: blur(2px);
+  z-index: -1;
+}
+
+/* About me decoration in mobile  */
+@media (min-width: 48rem) {
+  .about-left svg {
+    top: 0%;
+    left: 0%;
+  }
+
+  .circle-lg {
+    top: -10%;
+    right: 0;
+  }
+
+  .circle-sml {
+    top: 100%;
+    left: 0%;
   }
 }

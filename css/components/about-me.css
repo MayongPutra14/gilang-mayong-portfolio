@@ -1,0 +1,140 @@
+.about-me {
+  position: relative;
+  min-height: 100vh;
+}
+
+.about-us-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.about-us-container h4 {
+  font-size: var(--h4);
+  color: var(--color-primary-text);
+  margin-bottom: var(--size-32);
+  text-align: center;
+}
+
+/* .about-left {
+  position: relative;
+} */
+
+.formal-pict {
+  width: clamp(12.5rem, 30vw, 31.25rem);
+  height: clamp(12.5rem, 30vw, 31.25rem);
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  margin: 0 auto;
+}
+
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-32);
+}
+
+.about-right .description p {
+  color: var(--color-secondary-text);
+  font-size: var(--fs-body-text);
+  margin-top: var(--size-32);
+}
+
+/* Style for icons media social */
+.icons-media {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* styling bacground color */
+.icons-media a {
+  position: relative;
+  background-color: hsla(0, 0%, 100%, 0.537);
+  padding: 0.3rem;
+  border-radius: 50%;
+  box-shadow: 0px 0px 2px var(--color-secondary-text);
+}
+
+.icons-media a svg {
+  width: var(--size-28);
+  height: var(--size-28);
+  fill: var(--color-primary);
+}
+
+/* This is used to create tooltip box */
+.icons-media a::before {
+  content: attr(data-social);
+  position: absolute;
+  left: -0.9375rem;
+  background: var(--tooltip-bg);
+  color: var(--color-white);
+  padding: 0.2rem 0.8rem;
+  border-radius: 1rem;
+  transform: translateY(-25px) rotate(25deg);
+  font-size: 0.5rem;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+/* This are used for make tooltip boxes align with their icons  */
+.icons-media a[data-social="Linkedin"]::before {
+    left: -0.75rem;
+}
+
+.icons-media a[data-social="Github"]::before {
+    left: -0.625rem;
+}
+
+.icons-media a[data-social="Email"]::before {
+    left: -0.375rem;
+}
+
+
+
+.icons-media a:hover {
+  background: var(--tooltip-bg);
+}
+
+.icons-media a:hover svg {
+  fill: var(--color-white);
+}
+
+/* This is used to create triangle underneath the tooltip box */
+.icons-media a::after {
+  content: "";
+  position: absolute;
+  transform: translateX(-50%);
+  top: 0;
+  left: 0.625rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  background: var(--tooltip-bg);
+  clip-path: polygon(50% 100%, 0 0, 100% 0); /* Triangle */
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.icons-media a:hover::before {
+  transform: translateY(-2.125rem) rotate(0);
+  opacity: 1;
+}
+
+.icons-media a:hover::after {
+  transform: translateY(-0.9375rem) rotate(0);
+  z-index: -1;
+  opacity: 1;
+}
+
+/* About us in desktop */
+@media (min-width: 48rem) {
+  .about-us-container {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--size-32);
+  }
+  .about-left,
+  .about-right {
+    flex: 1;
+  }
+}

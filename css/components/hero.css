@@ -1,10 +1,9 @@
 /* This section is connected with decorations.css */
 /* it is used to make decoration position easier to maintain */
 .home {
-  display: relative;
+  position: relative;
   overflow: hidden;
-  height: 100vh;
-  /* padding-bottom: 10rem; */
+  min-height: 100vh;
 }
 
 .home .deco-wrapper {
@@ -12,13 +11,11 @@
   inset: 0;
   z-index: 0;
 }
-
 /* End of decorations.css connection */
 
 /* Hero Section */
 /* This is container of column left and column right*/
 .hero-container {
-  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,12 +28,13 @@
   display: flex;
   flex-direction: column;
   gap: var(--size-20);
+  width: 80%;
 }
 
 .profile {
   display: flex;
   flex-direction: column;
-  gap: var(--size-16);
+  gap: var(--size-20);
 }
 
 .profile h6 {
@@ -64,9 +62,8 @@
 }
 
 .profile-right img {
-  border-radius: 10%;
   object-fit: cover;
-  border-radius: 30% 70% 55% 45% / 60% 35% 65% 40%;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.25));
 }
 
 /* Desktop */
@@ -78,6 +75,10 @@
   }
 
   .profile-left {
-    max-width: 50%;
+    max-width: 40%;
+    gap: var(--size-32);    
+  }
+  .profile {
+    gap: var(--size-16);
   }
 }
