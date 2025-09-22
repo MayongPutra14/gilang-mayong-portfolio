@@ -1,0 +1,102 @@
+/* Container of Card Project */
+.card-project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--size-32);
+}
+
+/* Styling project layout and card shape: Img And Visit Project */
+.project {
+  position: relative;
+  width: 70%;
+  height: auto;
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: -16px -14px 13px -9px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.project:hover {
+  box-shadow: 16px 14px 13px -9px rgba(0, 0, 0, 0.3);
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+/* This is for visi project container include teks and right-arrow */
+.visit-project {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(var(--size-32));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 2.5rem;
+  padding-inline: var(--size-16);
+  font-size: var(--h6);
+  font-weight: 700;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  cursor: pointer;
+  opacity: 0;
+}
+
+.project:hover .visit-project {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.1s ease-in-out;
+}
+
+/* Layer for cover the card with opaciti 0: first state */
+.layer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(
+    0deg,
+    rgba(40, 230, 251, 1) 0%,
+    rgba(40, 230, 251, 0.57) 80%
+  );
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.layer:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(0);
+  opacity: 0.8;
+}
+
+
+
+/* Style Project section in desktop */
+@media (min-width: 48rem) {
+  .project {
+    width: 33.3333%;
+    box-shadow: -10px -12px 13px -9px rgba(0, 0, 0, 0.5);
+  }
+
+  .card-project {
+    flex-direction: row;
+    gap: var(--size-24);
+    align-items: flex-start;
+  }
+}
