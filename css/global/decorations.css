@@ -111,11 +111,16 @@
   }
 }
 
+.about-left {
+  color: var(--color-primary);
+}
+
 /* About Me Decorations */
 .about-left svg {
   position: absolute;
   top: 0%;
   left: 5%;
+  fill: var(--color-primary);
   width: clamp(4rem, 3.545rem + 7.27vw, 8rem);
   height: clamp(4rem, 3.545rem + 7.27vw, 8rem);
 }
@@ -210,7 +215,7 @@
     margin-inline: auto;
   }
 
-  .decorations-connect .circle-bottom  {
+  .decorations-connect .circle-bottom {
     left: 15%;
   }
 }

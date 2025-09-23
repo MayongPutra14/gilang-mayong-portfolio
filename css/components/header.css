@@ -49,7 +49,7 @@ nav ul li a {
   padding: 0rem 1rem;
 }
 
-nav ul li a{
+nav ul li a {
   display: block;
   cursor: pointer;
   font-size: 1rem;
@@ -61,7 +61,6 @@ nav ul li a:hover {
   color: var(--color-primary);
   transition: all 0.3s ease;
 }
-
 
 /* Styling border of listbar (hamburger menu) */
 .listbar {
@@ -87,11 +86,11 @@ nav ul li a:hover {
     padding-top: 5.5rem;
     border-bottom-left-radius: 20px;
     transform: translateY(-100%);
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     opacity: 0;
     z-index: -1;
   }
-  nav ul li a{
+  nav ul li a {
     padding: 1rem;
   }
 
@@ -101,11 +100,11 @@ nav ul li a:hover {
   }
 }
 
-
 /* Navbar in desktop*/
 @media (min-width: 48rem) {
-  .header-wrapper { /*Placeholder, height is fixed, prevent small jerk from navbar transition*/
-    height: 4.375rem ;
+  .header-wrapper {
+    /*Placeholder, height is fixed, prevent small jerk from navbar transition*/
+    height: 4.375rem;
   }
 
   nav {

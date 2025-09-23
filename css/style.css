@@ -1,12 +1,13 @@
 /* From Forlder Global */
-@import url('./global/boilerplate.css');
-@import url('./global/fonts.css');
-@import url('./global/decorations.css');
-@import url('./global/buttons.css');
+@import url("./global/boilerplate.css");
+@import url("./global/fonts.css");
+@import url("./global/decorations.css");
+@import url("./global/buttons.css");
 
 /* From Folder Components */
-@import url('./components/header.css');
-@import url('./components/hero.css');
-@import url('./components/about-me.css');
-@import url('./components/project.css');
-@import url('./components/contact-me.css');
+@import url("./components/header.css");
+@import url("./components/hero.css");
+@import url("./components/about-me.css");
+@import url("./components/project.css");
+@import url("./components/contact-me.css");
+@import url("./components/footer.css");

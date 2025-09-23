@@ -59,7 +59,7 @@ main {
   position: relative;
 }
 
-section {
+section, footer {
   padding-inline: min(5rem, 3vw);
   padding-block: 5rem 0;
 }

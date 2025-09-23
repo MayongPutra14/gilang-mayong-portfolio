@@ -76,7 +76,7 @@
 
   .profile-left {
     max-width: 40%;
-    gap: var(--size-32);    
+    gap: var(--size-32);
   }
   .profile {
     gap: var(--size-16);

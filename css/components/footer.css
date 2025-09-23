@@ -1,0 +1,107 @@
+/* Basic Style in footer */
+footer {
+  background-color: var(--color-primary);
+  margin-top: var(--size-64);
+  color: var(--color-white);
+}
+
+footer h5 {
+  font-size: var(--h4);
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+footer h6 {
+  color: var(--color-white);
+  font-size: var(--h6);
+  font-weight: 400;
+}
+
+/* Information container */
+.informations {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-32);
+}
+
+/* Basic style in each columns */
+.column1,
+.column2,
+.column3 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-16);
+  font-size: var(--h6);
+}
+
+/* Style for column 2: Quiclinks */
+.column2 ul li a {
+  display: flex;
+  align-items: center;
+}
+
+.column2 ul li a {
+  list-style: none;
+  color: var(--color-white);
+  font-weight: 500;
+  cursor: pointer;
+  padding-bottom: calc(var(--size-16) - 6px);
+}
+
+/* Create >> symbol for links */
+.column2 ul li a::before {
+  content: "»";
+  width: var(--size-16);
+  height: var(--size-16);
+  display: inline-block;
+  text-align: center;
+  line-height: 0.7;
+  color: var(--color-primary);
+  background-color: var(--color-white);
+  border-radius: 100%;
+  margin-right: var(--size-16);
+}
+
+/* Style for column 3: Contact */
+.column3 ul li {
+  display: flex;
+  align-items: center;
+  gap: var(--size-16);
+  padding-bottom: calc(var(--size-16) - 6px);
+  font-weight: 500;
+}
+
+.column3 svg {
+  width: var(--size-32);
+  fill: var(--color-white);
+}
+
+.copyright {
+    padding-block: var(--size-16);
+    text-align: center;
+    border-top: 2px solid var(--color-white);
+    font-weight: 500;
+    margin-top: var(--size-32);
+}
+
+.highlight {
+    color: var(--color-primary-text)
+}
+
+/* Footer On Desktop */
+@media (min-width: 48rem) {
+    .informations {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: var(--size-64);
+    }
+
+    .column1,
+    .column2,
+    .column3 {
+        flex: 1;
+        max-width: 33%;
+    }
+}

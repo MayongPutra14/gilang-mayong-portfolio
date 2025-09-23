@@ -1,77 +1,84 @@
 /* This setting is used to change teh direction in dekstop */
 .connect-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Little Words on left */
 .connect-left {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-bottom: var(--size-32);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: var(--size-32);
 }
 
 .connect-left h5 {
-    font-weight: 500;
-    font-size: var(--h4);
-    line-height: 1.4;
-    color: var(--color-secondary-text);
-    width: 80%;
+  font-weight: 500;
+  font-size: var(--h4);
+  line-height: 1.4;
+  color: var(--color-secondary-text);
+  width: 80%;
 }
 
 /* Form Container */
 .form-group {
-    position: relative;
-    padding-block: var(--size-16);
+  position: relative;
+  padding-block: var(--size-16);
 }
 
 /* Basix Style Of Input Box and Text Area */
-input, textarea {
-    caret-color: var(--color-primary);
-    font-weight: 500;
-    font-size: var(--fs-body-text);
-    width: 100%;
-    padding-block: 0.5rem ;
-    padding-left: var(--size-48);
-    border-color: transparent ;
-    transition: padding 0.2s ease;
-    cursor: text;
-    border-radius: var(--size-16);
+input,
+textarea {
+  caret-color: var(--color-primary);
+  font-weight: 500;
+  font-size: var(--fs-body-text);
+  width: 100%;
+  padding-block: 0.5rem;
+  padding-left: var(--size-48);
+  border-color: transparent;
+  transition: padding 0.2s ease;
+  cursor: text;
+  border-radius: var(--size-16);
 }
-
 
 textarea {
-    height: clamp(8rem, 6rem + 4vw, 12rem);
+  height: clamp(8rem, 6rem + 4vw, 12rem);
 }
 
-input::placeholder, textarea::placeholder {
-    color: var(--color-secondary-text);
-    font-weight: 500;
-    opacity: 0.7;
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-secondary-text);
+  font-weight: 500;
+  opacity: 0.7;
 }
 
 /* Style border when user star to fill the form */
-input:focus, textarea:focus {
-    outline: 2px solid var(--color-primary);
-    padding-inline: var(--size-52);
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--color-primary);
+  padding-inline: var(--size-52);
 }
 
 /* set Position of svg in the input box  */
 .form-group svg {
-    position: absolute;
-    width: var(--size-24);
-    top: 1.5rem;
-    left: 1rem;
+  position: absolute;
+  width: var(--size-24);
+  top: 1.5rem;
+  left: 1rem;
 }
 
 @media (min-width: 48rem) {
-    .connect-container {
-        flex-direction: row;
-    }
+  .connect-container {
+    flex-direction: row;
+  }
 
-    .connect-left, .connect-right {
-        flex: 1 1 0;
-        min-width: 0;
-    }
+  .connect-left {
+    margin-inline: auto;
+  }
+
+  .connect-left,
+  .connect-right {
+    flex: 1 1 0;
+    min-width: 0;
+  }
 }
