@@ -2,7 +2,7 @@
   display: flex;
   gap: 0.8rem;
 }
-
+/* Button for hero section */
 .buttons button {
   display: flex;
   align-items: center;
@@ -15,13 +15,25 @@
   border-radius: 0.5rem;
   cursor: pointer;
 }
-
+/* Icon Download in hero button */
 .buttons .icn-download {
   width: var(--fs-body-text);
   height: var(--fs-body-text);
   fill: hsl(243, 28%, 51%);
 }
 
+.btn-cv {
+  background-color: transparent;
+  border: 2px solid hsl(243, 28%, 51%);
+  color: hsl(243, 28%, 51%);
+  transition: all .2s ease;
+}
+
+.btn-cv:hover {
+    transform: scale(1.1);
+}
+
+/* Button "get in touch" */
 .btn-cta {
   background-color: var(--color-primary);
   border: none;
@@ -36,13 +48,19 @@
   transform: scale(1.1);
 }
 
-.btn-cv {
-  background-color: transparent;
-  border: 2px solid hsl(243, 28%, 51%);
-  color: hsl(243, 28%, 51%);
+/* Button Submit Connect With Me */
+form button {
+  width: 100%;
+  background-color: var(--color-primary);
+  border: none;
+  color: var(--color-white);
+  font-weight: 700;
   transition: all .2s ease;
+  padding: 0.8rem;
+  border-radius: var(--size-20);
+  cursor: pointer;
 }
 
-.btn-cv:hover {
-    transform: scale(1.1);
+form button:hover {
+  background-color: var(--color-primary-hover);
 }

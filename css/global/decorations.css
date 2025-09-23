@@ -161,3 +161,56 @@
     left: 0%;
   }
 }
+
+/* Decoration Of Connect with me*/
+.decorations-connect {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 8rem;
+}
+/* Icon Paper Plane*/
+.decorations-connect svg {
+  margin-inline: auto;
+  width: clamp(6rem, 3.545rem + 7.27vw, 10rem);
+}
+/* Little Circle left */
+.decorations-connect .circle-left {
+  position: absolute;
+  top: 0%;
+  left: 10%;
+  width: clamp(3rem, 1.545rem + 3.27vw, 6rem);
+  height: clamp(3rem, 1.545rem + 3.27vw, 6rem);
+  background: none;
+  opacity: 0.6;
+}
+/* Bigger Circle Right */
+.decorations-connect .circle-right {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  width: clamp(4rem, 2.545rem + 4.27vw, 8rem);
+  height: clamp(4rem, 2.545rem + 4.27vw, 8rem);
+  background: none;
+  opacity: 0.4;
+}
+/* Biggest Circle Bottom */
+.circle-bottom {
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+  width: clamp(4rem, 3.545rem + 5.27vw, 8rem);
+  height: clamp(4rem, 3.545rem + 5.27vw, 8rem);
+  background: none;
+  filter: blur(2px);
+}
+
+/* Connect With Me in Desktop */
+@media (min-width: 48rem) {
+  .decorations-connect svg {
+    margin-inline: auto;
+  }
+
+  .decorations-connect .circle-bottom  {
+    left: 15%;
+  }
+}
