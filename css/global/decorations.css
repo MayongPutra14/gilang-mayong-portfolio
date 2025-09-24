@@ -35,12 +35,12 @@
 .blob {
   position: absolute;
   bottom: 0%;
-  right: 18%;
-  width: 18rem;
-  height: 18rem;
+  right: 15%;
+  width: clamp(10rem, 9.727rem + 16.36vw, 18rem);
+  height: clamp(10rem, 9.727rem + 16.36vw, 18rem);
   background-color: var(--color-primary);
   border-radius: 50%;
-  animation: morph 20s ease-in-out infinite alternate;
+  animation: morph 15s ease-in-out infinite alternate;
   will-change: border-radius, transform;
   z-index: -1;
 }
@@ -48,10 +48,10 @@
 /* Blob animation */
 @keyframes morph {
   0% {
-    border-radius: 78% 22% 46% 54% / 62% 20% 80% 38%;
+    border-radius: 62% 38% 51% 51% / 43% 43% 56% 56%;
   }
   25% {
-    border-radius: 26% 74% 65% 35% / 29% 69% 31% 71%;
+    border-radius: 38% 65% 43% 60% / 56% 46% 53% 44%;
   }
   50% {
     border-radius: 53% 47% 47% 53% / 44% 50% 50% 56%;
@@ -78,14 +78,14 @@
   width: var(--size-40);
   position: absolute;
   bottom: 10%;
-  right: 8%;
+  right: 2%;
   stroke: var(--color-decorations);
 }
 
 .hero-decorations .circle {
   position: absolute;
-  left: var(--size-64);
-  top: var(--size-48);
+  left: var(--size-52);
+  top: var(--size-44);
   width: var(--size-64);
   height: var(--size-64);
   border-color: var(--color-decorations);
@@ -107,7 +107,7 @@
     height: 22rem;
     bottom: 0%;
     right: 14%;
-    animation: morph 25s ease-in-out infinite alternate;
+    animation: morph 20s ease-in-out infinite alternate;
   }
 }
 
@@ -177,6 +177,7 @@
 .decorations-connect svg {
   margin-inline: auto;
   width: clamp(6rem, 3.545rem + 7.27vw, 10rem);
+  fill: var(--color-primary);
 }
 /* Little Circle left */
 .decorations-connect .circle-left {

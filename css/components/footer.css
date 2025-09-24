@@ -19,9 +19,9 @@ footer h6 {
 
 /* Information container */
 .informations {
-    display: flex;
-    flex-direction: column;
-    gap: var(--size-32);
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-32);
 }
 
 /* Basic style in each columns */
@@ -77,31 +77,27 @@ footer h6 {
 }
 
 .copyright {
-    padding-block: var(--size-16);
-    text-align: center;
-    border-top: 2px solid var(--color-white);
-    font-weight: 500;
-    margin-top: var(--size-32);
-}
-
-.highlight {
-    color: var(--color-primary-text)
+  padding-block: var(--size-16);
+  text-align: center;
+  border-top: 2px solid var(--color-white);
+  font-weight: 500;
+  margin-top: var(--size-32);
 }
 
 /* Footer On Desktop */
 @media (min-width: 48rem) {
-    .informations {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: var(--size-64);
-    }
+  .informations {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--size-64);
+  }
 
-    .column1,
-    .column2,
-    .column3 {
-        flex: 1;
-        max-width: 33%;
-    }
+  .column1,
+  .column2,
+  .column3 {
+    flex: 1;
+    max-width: 33%;
+  }
 }

@@ -62,5 +62,5 @@ form button {
 }
 
 form button:hover {
-  background-color: var(--color-primary-hover);
+  background-color: var(--color-hover);
 }

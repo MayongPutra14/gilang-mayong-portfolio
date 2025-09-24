@@ -6,7 +6,7 @@ header {
 }
 
 nav {
-  background-color: var(--color-white);
+  background-color: var(--color-navbar);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,9 +24,7 @@ nav .profile-name {
 
 /* My name */
 h5 {
-  color: var(--color-secondary-text);
-  font-size: var(--h6);
-  font-weight: 700;
+  display: none;
 }
 
 .blue {
@@ -53,7 +51,7 @@ nav ul li a {
   display: block;
   cursor: pointer;
   font-size: 1rem;
-  color: var(--color-secondary-text);
+  color: var(--color-secondary);
   font-weight: 500;
 }
 
@@ -62,21 +60,33 @@ nav ul li a:hover {
   transition: all 0.3s ease;
 }
 
+.toggle {
+  display: flex;
+  justify-content: space-between;
+  width: 7rem;
+  fill: var(--color-primary);
+}
+
 /* Styling border of listbar (hamburger menu) */
 .listbar {
   border: 2px solid transparent;
   border-radius: 5px;
-  fill: var(--color-primary);
+  cursor: pointer;
 }
 
 .listbar.actice {
   border: 2px solid var(--color-primary);
 }
 
+.mode-toggle {
+  fill: var(--color-primary);
+  cursor: pointer;
+}
+
 /* Navbar link in mobile */
 @media (max-width: 48rem) {
   nav ul {
-    background-color: var(--color-white);
+    background-color: var(--color-navbar);
     position: fixed;
     top: 0;
     right: 0;
@@ -119,6 +129,14 @@ nav ul li a:hover {
 
   nav .listbar {
     display: none;
+    cursor: default;
+  }
+
+  h5 {
+    display: block;
+    color: var(--color-secondary);
+    font-size: var(--h6);
+    font-weight: 700;
   }
 
   nav.scrolled {

@@ -32,7 +32,7 @@
 }
 
 .about-right .description p {
-  color: var(--color-secondary-text);
+  color: var(--color-secondary);
   font-size: var(--fs-body-text);
   margin-top: var(--size-32);
 }
@@ -49,7 +49,7 @@
   background-color: hsla(0, 0%, 100%, 0.537);
   padding: 0.3rem;
   border-radius: 50%;
-  box-shadow: 0px 0px 2px var(--color-secondary-text);
+  box-shadow: 0px 0px 2px var(--color-secondary);
 }
 
 .icons-media a svg {

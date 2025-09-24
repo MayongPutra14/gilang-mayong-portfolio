@@ -1,12 +1,16 @@
 :root {
   --color-primary: hsl(186, 96%, 57%);
   --color-background: #d6e2f0;
-  --color-primary-text: hsl(244, 100%, 3%);
-  --color-icon: hsl(0, 0%, 33%);
-  --color-secondary-text: hsl(0, 0%, 33%);
+  --color-navbar: hsl(0, 0%, 100%);
+  --color-hero: hsl(0, 0%, 10%);
+  --color-secondary: hsl(0, 0%, 33%);
   --color-white: #ffffff;
-  --color-primary-hover: hsl(186, 94%, 50%);
-
+  --color-hover: hsl(186, 94%, 50%);
+  --layer-gradient: linear-gradient(
+    0deg,
+    rgba(40, 230, 251, 1) 0%,
+    rgba(40, 230, 251, 0.57) 80%
+  );
 
   /* Size */
   --size-16: 1rem; /* 16px */
@@ -28,7 +32,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  /* outline: 1px solid red;  */
+  /* outline: 1px solid red; */
 }
 
 * {
@@ -37,16 +41,24 @@
   font: inherit;
 }
 
-.dark-mode {
+html.dark-mode {
+  --color-navbar: hsl(0, 0%, 10%);
   --color-primary: hsl(243, 79%, 53%);
   --color-background: hsl(196, 100%, 3%);
+  --color-hero: hsl(0, 0%, 100%);
   --color-primary-text: hsl(244, 100%, 97%);
-  --color-icon: hsl(243, 28%, 51%);
+  --color-secondary: hsl(0, 0%, 60%);
+  --color-hover: hsl(243, 79%, 40%);
+  --layer-gradient: linear-gradient(
+    0deg,
+    rgba(50, 40, 230, 1) 9%,
+    rgba(50, 40, 230, 0.64) 100%
+  );
 }
 
 html {
   scroll-behavior: smooth;
-  /* color-scheme: dark light; */
+  color-scheme: dark light;
 }
 
 body {
@@ -59,9 +71,14 @@ main {
   position: relative;
 }
 
-section, footer {
+section {
   padding-inline: min(5rem, 3vw);
-  padding-block: 5rem 0;
+  padding-block: 7rem 0rem;
+}
+
+footer {
+  padding-inline: min(5rem, 3vw);
+  padding-block: 2rem 0rem;
 }
 
 h3,
@@ -76,7 +93,7 @@ h4 {
   position: relative;
   padding-bottom: 0.5rem;
   font-size: var(--h4);
-  color: var(--color-primary-text);
+  color: var(--color-hero);
   margin-bottom: var(--size-32);
   width: max-content;
   text-align: center;
