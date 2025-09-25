@@ -42,6 +42,7 @@
 }
 
 html.dark-mode {
+  color-scheme: dark;
   --color-navbar: hsl(0, 0%, 10%);
   --color-primary: hsl(243, 79%, 53%);
   --color-background: hsl(196, 100%, 3%);
@@ -58,7 +59,7 @@ html.dark-mode {
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark light;
+  color-scheme: light;
 }
 
 body {

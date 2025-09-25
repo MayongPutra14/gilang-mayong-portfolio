@@ -73,15 +73,19 @@
         <div class="hero-container">
           <div class="profile-left">
             <div class="profile">
-              <h6>Hi, I’m Gilang Mayong</h6>
-              <h3>Student <span>Web</span> Developer</h3>
-              <p>
+              <h6 class="animation fade-in-left" data-delay="0.2">
+                Hi, I’m Gilang Mayong
+              </h6>
+              <h3 class="animation fade-in-left" data-delay="0.4">
+                Student <span>Web</span> Developer
+              </h3>
+              <p class="animation fade-in-left" data-delay="0.6">
                 Right now I’m studying Computer Engineering and exploring
                 front-end basics like HTML, CSS, and JavaScript to start
                 building real projects.
               </p>
             </div>
-            <div class="buttons">
+            <div class="buttons animation fade-in-left" data-delay="0.8">
               <button class="btn-cv">
                 <svg
                   class="icn-download"
@@ -100,7 +104,7 @@
           </div>
 
           <!-- Profile Right is section that contains my picture and some decorations-->
-          <div class="profile-right">
+          <div class="profile-right animation scale-up" data-delay="0.10">
             <!-- blob animation -->
             <div class="blob blob-animation"></div>
 
@@ -140,7 +144,7 @@
 
       <!-- About me section -->
       <section id="about-me" class="about-me">
-        <div class="heading-4">
+        <div class="heading-4 animation fade-in-up">
           <h4>About Me</h4>
         </div>
         <div class="about-us-container">
@@ -416,7 +420,7 @@
             </svg>
             <!-- my photo profile -->
             <img
-              class="formal-pict theme-img"
+              class="formal-pict theme-img animation scale-up"
               data-light="./assets/images/image-person/about-us-light-mode.webp"
               data-dark="./assets/images/image-person/about-us-dark-mode.webp"
               src="./assets/images/image-person/about-us-dark-mode.webp"
@@ -433,14 +437,14 @@
           <!-- Description about me -->
           <div class="about-right">
             <div class="description">
-              <p>
+              <p class="animation fade-in-right" data-delay="0.2">
                 I’m currently studying Computer Engineering Technology and have
                 been drawn into the world of web development because of how
                 impactful and widely used the web is in our daily lives. That
                 sense of wonder motivated me to explore how websites are built,
                 starting with front-end development.
               </p>
-              <p>
+              <p class="animation fade-in-right" data-delay="0.4">
                 My focus right now is learning HTML, CSS, and JavaScript to
                 become a front-end developer, while keeping my long-term goal of
                 becoming a full-stack web developer. Since I’ve always enjoyed
@@ -453,6 +457,8 @@
             <div class="icons-media">
               <!-- Icon Linkedin -->
               <a
+                class="animation scale-up"
+                data-delay="0.2"
                 data-social="Linkedin"
                 style="--tooltip-bg: #0a66c2"
                 href="www.linkedin.com/in/gilang-mayong-saputra"
@@ -472,6 +478,8 @@
 
               <!-- Icon Github -->
               <a
+                class="animation scale-up"
+                data-delay="0.4"
                 data-social="Github"
                 style="--tooltip-bg: #181717"
                 href="https://github.com/MayongPutra14"
@@ -490,6 +498,8 @@
 
               <!-- Icon Email -->
               <a
+                class="animation scale-up"
+                data-delay="0.6"
                 data-social="Email"
                 style="--tooltip-bg: #d44638"
                 href="mailto:gilang46622@gmail.com"
@@ -508,6 +518,8 @@
 
               <!-- Icon Whatsapp -->
               <a
+                class="animation scale-up"
+                data-delay="0.8"
                 data-social="Whatsapp"
                 style="--tooltip-bg: #25d366"
                 href="https://wa.me/6289671408851"
@@ -526,6 +538,8 @@
 
               <!-- Icon Instagram -->
               <a
+                class="animation scale-up"
+                data-delay="0.9"
                 data-social="Instagram"
                 style="
                   --tooltip-bg: linear-gradient(
@@ -557,12 +571,12 @@
       <!-- Projects section -->
       <section id="project" class="project-container">
         <div class="project-container">
-          <div class="heading-4">
+          <div class="heading-4 animation fade-in-up">
             <h4>Featured Projects</h4>
           </div>
           <div class="card-project">
             <!-- card for every projects -->
-            <div class="project layer">
+            <div class="project layer animation fade-in-up">
               <a
                 href="https://mayongputra14.github.io/Roti-Maryam-Landing-page/"
                 ><img
@@ -590,17 +604,17 @@
 
       <!-- Connerct with me -->
       <section id="connect" class="connect">
-        <div class="heading-4">
+        <div class="heading-4 animation fade-in-up">
           <h4>Connect With Me</h4>
         </div>
         <div class="connect-container">
           <!-- Left column -->
           <div class="connect-left">
-            <h5>
+            <h5 class="animation fade-in-left">
               Ready to start a project ?<span class="blue"> Fill the form</span>
               and tell me how I could help you.
             </h5>
-            <div class="decorations-connect">
+            <div class="decorations-connect animation scale-up">
               <!-- Icon Paper Plane -->
               <svg
                 width="152"
@@ -623,7 +637,7 @@
           <div class="connect-right">
             <form action="#" method="post">
               <!-- Full name -->
-              <div class="form-group">
+              <div class="form-group animation fade-in-down" data-delay="0.2">
                 <label for="name"></label>
                 <svg
                   width="23"
@@ -647,7 +661,7 @@
               </div>
 
               <!-- Email address -->
-              <div class="form-group">
+              <div class="form-group animation fade-in-down" data-delay="0.4">
                 <label for="email"></label>
                 <svg
                   width="44"
@@ -671,7 +685,7 @@
               </div>
 
               <!-- Message -->
-              <div class="form-group">
+              <div class="form-group animation fade-in-down" data-delay="0.6">
                 <label for="message"></label>
                 <svg
                   width="33"
@@ -693,7 +707,13 @@
                   required
                 ></textarea>
               </div>
-              <button type="submit">Submit</button>
+              <button
+                type="submit"
+                class="animation fade-in-up"
+                data-delay="0.7"
+              >
+                Submit
+              </button>
             </form>
           </div>
         </div>

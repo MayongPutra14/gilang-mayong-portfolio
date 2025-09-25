@@ -52,8 +52,38 @@ if (getThemePreference) {
   getThemePreference(true); // if theme preference is dark, add dark-mode class from html element
 }
 
+// When Toggle is clicked
 modeToggle.addEventListener("click", () => {
   const isDark = html.classList.contains("dark-mode"); // check if html element has dark-mode class
+  //add animation in every picture
+  themeImages.forEach((img) => {
+    img.classList.remove("show", "hide");
+
+    img.classList.add("hide"); // add rotate
+
+    setTimeout(() => {
+      img.src = isDark ? img.dataset.light : img.dataset.dark; // change src picture in half of animation time
+      img.classList.remove("hide");
+      img.classList.add("show");
+    }, 300);
+  });
   getThemePreference(!isDark); // toggle dark-mode class from html element
 });
 // End of dark mode toggle button
+
+// this is for animation intersections
+const animations = document.querySelectorAll(".animation");
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("visible", entry.isIntersecting);
+      if (entry.isIntersecting) observer.unobserve(entry.target);
+    });
+  },
+  { threshold: 0.1 }
+);
+animations.forEach((animation) => {
+  const delay = animation.dataset.delay || 0; // this is a condition, if element doesn't has any delay, it will set 0
+  animation.style.transitionDelay = `${delay}s`; // give delay for each element
+  observer.observe(animation);
+});

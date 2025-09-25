@@ -10,7 +10,7 @@
 /* Styling project layout and card shape: Img And Visit Project */
 .project {
   position: relative;
-  width: 70%;
+  width: 100%;
   height: auto;
   background-color: var(--color-white);
   border-radius: 0.2rem;

@@ -1,0 +1,55 @@
+:root {
+  --translateX: 3.125rem;
+  --trasnlateY: 3.125rem;
+  --scale-up: 0.8;
+}
+
+.fade-in-right,
+.fade-in-left,
+.fade-in-up,
+.fade-in-down,
+.scale-up {
+  opacity: 0;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-right {
+  transform: translateX(var(--translateX));
+}
+
+.fade-in-left {
+  transform: translateX(calc(-1 * var(--translateX)));
+}
+
+.fade-in-up {
+  transform: translateY(var(--trasnlateY));
+}
+
+.fade-in-down {
+  transform: translateY(calc(-1 * var(--trasnlateY)));
+}
+
+.scale-up {
+  transform: scale(0.8);
+}
+
+.animation.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Transtion photo profile */
+.theme-img {
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.theme-img.hide {
+  opacity: 0;
+  transform: rotateY(360deg);
+}
+
+.theme-img.show {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
