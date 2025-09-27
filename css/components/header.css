@@ -23,7 +23,7 @@ nav .profile-name {
 }
 
 /* My name */
-h5 {
+.profile-name h5 {
   display: none;
 }
 
@@ -132,7 +132,7 @@ nav ul li a:hover {
     cursor: default;
   }
 
-  h5 {
+  .profile-name h5 {
     display: block;
     color: var(--color-secondary);
     font-size: var(--h6);
