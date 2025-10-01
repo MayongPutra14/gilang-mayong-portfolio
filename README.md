@@ -24,6 +24,8 @@ This portfolio website includes several sections and interactive features:
 - **Dark Mode** – Users can switch between light and dark theme for better accessibility.   
 - **Animations** – Smooth animations for a modern and engaging user experience.  
 - **Responsive Design** – Fully optimized for desktop, and mobile devices.  
+- **Form request** – Use for user to send me a message  
+- **Pop Up or Modal** – Message that appear when user succes send a message  
   
 ---
 

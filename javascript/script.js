@@ -87,3 +87,85 @@ animations.forEach((animation) => {
   animation.style.transitionDelay = `${delay}s`; // give delay for each element
   observer.observe(animation);
 });
+
+// Get reverence to MODAL(popup) element
+const form = document.getElementById("contact-form"); // get form element
+const sumbitBtn = document.getElementById("submit-btn"); // get submit button element
+const modal = document.getElementById("success-modal"); // get modal element
+const closeBtn = document.querySelector(".close-btn"); // get close button element
+const okBtn = document.getElementById("modal-ok-btn"); // get ok button element
+
+// When the user clicks the submit button, open the modal
+function showModal() {
+  modal.classList.add("show");
+}
+
+// When the user clicks on <span> (x), close the modal
+function hidemodal() {
+  modal.classList.remove("show");
+  // reset form
+  form.reset();
+}
+
+// event listener to close the modal when close button is clicked
+closeBtn.addEventListener("click", hidemodal);
+// event listener to close the modal when ok button is clicked
+okBtn.addEventListener("click", hidemodal);
+
+// When the user clicks anywhere outside of the modal, close it
+window.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    hidemodal();
+  }
+});
+
+// Form submission handling
+form.addEventListener("submit", async (event) => {
+  event.preventDefault(); // prevent the default form submission
+
+  // 1. Disable Submit button (prevent double clicks)
+  sumbitBtn.disabled = true;
+  sumbitBtn.textContent = "Sending..."; // feedback visual on button
+
+  // 2. Take data form
+  const data = new FormData(event.target); // easy way to take all input data
+
+  // 3. send data by fecth
+  try {
+    const response = await fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      // 4. If success: show modal
+      showModal();
+    } else {
+      // 5. If error: Handle error (e.g show alert or another error modal)
+      // We can take error message from Formspree
+      const result = await response.json();
+      let errorMessage = "Submission failed. Please try again.";
+
+      if (result && result.errors && Array.isArray(result.errors)) {
+        errorMessage +=
+          " Detail: " + result.errors.map((e) => e.message).join(" | ");
+      } else if (result && result.error) {
+        // Jika Formspree mengembalikan properti 'error' tunggal (string)
+        errorMessage += " Detail: " + result.error;
+      }
+
+      alert(errorMessage);
+    }
+  } catch (error) {
+    // Handle failed connection (e.g Network down)
+    console.log("Error when connecting", error);
+    alert("Conection failed, Please try again.");
+  } finally {
+    // 6. Turn on the submit button
+    sumbitBtn.disabled = false;
+    sumbitBtn.textContent = "Submit";
+  }
+});

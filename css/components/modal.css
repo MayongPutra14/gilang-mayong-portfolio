@@ -1,0 +1,88 @@
+/* Styling overlay background for background */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visible: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+  backdrop-filter: blur(
+    5px
+  ); /* Optional: adds a blur effect to the background */
+}
+
+.modal.show {
+  visible: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Modal content box */
+.modal-content {
+  background-color: var(--color-navbar);
+  padding: var(--size-20);
+  border: 1px solid var(--color-primary);
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: calc(
+    var(--size-64) * 6.25rem
+  ); /* Optional: limit the maximum width */
+  border-radius: 0.5rem; /* Optional: rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Optional: adds a shadow effect */
+}
+
+.modal-content h6 {
+  font-size: var(--h6);
+  padding-bottom: var(--size-16);
+}
+
+.modal-content p {
+  font-size: var(--fs-body-text);
+  padding-bottom: var(--size-16);
+}
+
+/* Close button X */
+.close-btn {
+  color: var(--color-primary);
+  float: right;
+  font-size: var(--size-32);
+  font-weight: bold;
+  border: none;
+  background: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Styling hover state for (X) */
+.close-btn:hover,
+.close-btn:focus {
+  color: var(--color-hover);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Styling for modal-ok-btn */
+#modal-ok-btn {
+  background-color: var(--color-primary);
+  color: var(--color-primary-text);
+  padding: calc(var(--size-16) - 4px) var(--size-32);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: var(--size-16);
+  font-weight: 600;
+  transition: background-color 0.3ms ease;
+  margin-top: var(--size-16);
+}
+
+#modal-ok-btn:hover {
+  background-color: var(--color-hover);
+}

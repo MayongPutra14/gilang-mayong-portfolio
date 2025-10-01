@@ -635,7 +635,11 @@
 
           <!-- Right column -->
           <div class="connect-right">
-            <form action="https://formspree.io/f/mnngdbjz" method="post">
+            <form
+              id="contact-form"
+              action="https://formspree.io/f/mnngdbjz"
+              method="post"
+            >
               <!-- Full name -->
               <div class="form-group animation fade-in-down" data-delay="0.2">
                 <label for="name"></label>
@@ -708,6 +712,7 @@
                 ></textarea>
               </div>
               <button
+                id="submit-btn"
                 type="submit"
                 class="animation fade-in-up"
                 data-delay="0.7"
@@ -718,6 +723,19 @@
           </div>
         </div>
       </section>
+
+      <!-- Modal or Popup -->
+      <div id="success-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h6>Thank You!!</h6>
+          <p>
+            Your message has been received, and I’ll get back to you as soon as
+            possible.
+          </p>
+          <button id="modal-ok-btn">Ok</button>
+        </div>
+      </div>
 
       <footer>
         <div class="informations">
